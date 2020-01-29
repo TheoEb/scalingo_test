@@ -7,11 +7,11 @@ Technical test for Scalingo in Go.
 
 # How to run
 ### server
-Get a github API key and put it in a file name "github_api.key" at the root of the repo.
+Get a github API key and put it in a file named "github_api.key" at the root of the repo.
 
 ```
 cd backend
-GITHUB_KEY_FILE=<your github api key> go run main.go
+GITHUB_KEY_FILE=<path_to_the_key_file> go run main.go
 ```
 
 ### web client
