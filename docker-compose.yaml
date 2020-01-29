@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  server:
+    build: "backend"
+    image: server-image
+    container_name: server-container
+    restart: on-failure
+    secrets:
+      - github
+    environment:
+      - GITHUB_KEY_FILE=/run/secrets/github
+      - GIN_MODE=release
+    ports:
+      - "8765:8765"
+
+  web:
+    build: "frontend"
+    image: web-image
+    container_name: web-container
+    restart: on-failure
+    environment:
+      - PORT=8766
+    ports:
+      - "8766:8766"
+
+secrets:
+  github:
+    file: github_api.key
