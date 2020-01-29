@@ -15,7 +15,6 @@ GITHUB_KEY_FILE=<your github api key> go run main.go
 ```
 
 ### web client
-Go to /scalingo_test/frontend/
 
 ```
 cd frontend
